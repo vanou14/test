@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta name="robots" content="all"/>
+<meta name="description" content="F"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="keywords" content=""/>
+<link href="file:///C|/Users/Vanou/Desktop/sitesacrochetournicroche/style.css" rel="stylesheet" type="text/css"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="css/bigvideo.css">
+<!-- [if lt IE 10]> <link rel="stylesheet" type="text/css" href="css/style2IE.css" /> <![endif] -->
+ <!-- BigVideo Dependencies -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.8.1.min.js"><\/script>')</script>
+<script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+<script src="js/jquery.imagesloaded.min.js"></script>
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+<script src="js/jquery.transit.min.js"></script>
+<script src="js/modernizr-2.5.3.min.js"></script>
+    <!-- BigVideo -->
+<script src="js/bigvideo.js"></script>
+        <!--[if lte IE 8]>
+<style>
+        /* Rotation of the arrow element for IE < 9 */
+        .next-icon { /* IE Matrix Calculator - http: //www.boogdesign.com/examples/transforms/matrix-calculator.html */;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=-0.70710678, M21=0.70710678, M22=0.70710678,sizingMethod='auto expand')";
+            filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=-0.70710678, M21=0.70710678, M22=0.70710678,sizingMethod='auto expand');
+                    }
+</style>
+<![endif]-->
+    
+<title>Productions citoyen Desjardins</title>
+</head>
+<body> 
+	<div id="wrapper">
+		<div id="header">
+      		<h1><img src="file:///C|/Users/Vanou/Desktop/siteproductionscitoyendesjardins/images/logoproductioncd.jpg" width="247" height="76" alt="logo productions citoyen desjardins"></h1>
+      	<nav>	
+            <ul id="mh-menu">
+				<li><a href="#"><span>Henry James</span></a><img src="images/1.jpg" alt="image01"/></li>
+				<li><a href="#"><span>Francis Morgan</span></a><img src="images/2.jpg" alt="image02"/></li>
+				<li><a href="#"><span>Kevin Schneider</span></a><img src="images/3.jpg" alt="image03"/></li>
+				<li><a href="#"><span>Benjamin Zakalis</span></a><img src="images/4.jpg" alt="image04"/></li>
+			</ul>
+        </nav>
+             <div class="screen" id="screen-1" data-video="vid/bird.mp4">
+            <img src="img/bird.jpg" class="big-image" />
+            <p id="titre">#1 TITRE VIDÉO1</p>
+       		</div>
+        	<div class="screen" id="screen-2" data-video="vid/satellite.mp4">
+            <img src="img/satellite.jpg" class="big-image" />
+            <p id="titre">#1 TITRE VIDÉO1</p>
+       		 </div>
+        	<div class="screen" id="screen-3" data-video="vid/camera.mp4">
+            <img src="img/camera.jpg" class="big-image" />
+            <p id="titre">#1 TITRE VIDÉO1</p>a</h1>
+       		 </div>
+        	<div class="screen" id="screen-4" data-video="vid/spider.mp4">
+            <img src="img/spider.jpg" class="big-image" />
+            <p id="titre">#1 TITRE VIDÉO1</p>
+        	</div>
+        	<div class="screen" id="screen-5" data-video="vid/dandelion.mp4">
+            <img src="img/dandelion.jpg" class="big-image" />
+            <p id="titre">#1 TITRE VIDÉO1</p>
+       		 </div> 
+        <div id="next-btn">
+        <a href="#" class="next-icon"></a>
+    	</div> 
+		</div> 
+         		 
+		  			      		
+ 	<div id="footer"> 
+      <section id="icone"><!-- icones facebook et autres -->
+          	 <a href=""><img src="file:///C|/Users/Vanou/Desktop/siteproductionscitoyendesjardins/images/facebook3.png" width="32" height="32" alt="icone facebook"></a>
+             <a href="file:///C|/Users/Vanou/Desktop/siteproductionscitoyendesjardins/http"><img src="file:///C|/Users/Vanou/Desktop/siteproductionscitoyendesjardins/images/twitter3.png" width="32" height="32" alt="icone twiter"></a>
+             <a href="file:///C|/Users/Vanou/Desktop/siteproductionscitoyendesjardins/http"><img src="file:///C|/Users/Vanou/Desktop/siteproductionscitoyendesjardins/images/google-plus3.png" width="32" height="32" alt="icone google plus"></a>
+    	<a href="mailto:p.desjardins@productionscitoyensdesjardins.com"><img src="file:///C|/Users/Vanou/Desktop/siteproductionscitoyendesjardins/images/mail4.png" width="32" height="32" alt="icone email"></a>
+      </section><!-- icones -->
+      <section id="droits"><!-- copyright -->
+        <p>© 2015 par Productions citoyens Desjardins | Designé par Maryvadesign</p>
+      </section><!-- fin droits -->
+	</div>
+</div>
+ <script>
+        $(function() {
+
+            // Use Modernizr to detect for touch devices, 
+            // which don't support autoplay and may have less bandwidth, 
+            // so just give them the poster images instead
+            var screenIndex = 1,
+                numScreens = $('.screen').length,
+                isTransitioning = false,
+                transitionDur = 1000,
+                BV,
+                videoPlayer,
+                isTouch = Modernizr.touch,
+                $bigImage = $('.big-image'),
+                $window = $(window);
+            
+            if (!isTouch) {
+                // initialize BigVideo
+                BV = new $.BigVideo({forceAutoplay:isTouch});
+                BV.init();
+                showVideo();
+                
+                BV.getPlayer().addEvent('loadeddata', function() {
+                    onVideoLoaded();
+                });
+
+                // adjust image positioning so it lines up with video
+                $bigImage
+                    .css('position','relative')
+                    .imagesLoaded(adjustImagePositioning);
+                // and on window resize
+                $window.on('resize', adjustImagePositioning);
+            }
+            
+            // Next button click goes to next div
+            $('#next-btn').on('click', function(e) {
+                e.preventDefault();
+                if (!isTransitioning) {
+                    next();
+                }
+            });
+
+            function showVideo() {
+                BV.show($('#screen-'+screenIndex).attr('data-video'),{ambient:true});
+            }
+
+            function next() {
+                isTransitioning = true;
+                
+                // update video index, reset image opacity if starting over
+                if (screenIndex === numScreens) {
+                    $bigImage.css('opacity',1);
+                    screenIndex = 1;
+                } else {
+                    screenIndex++;
+                }
+                
+                if (!isTouch) {
+                    $('#big-video-wrap').transit({'left':'-100%'},transitionDur)
+                }
+                    
+                (Modernizr.csstransitions)?
+                    $('.wrapper').transit(
+                        {'left':'-'+(100*(screenIndex-1))+'%'},
+                        transitionDur,
+                        onTransitionComplete):
+                    onTransitionComplete();
+            }
+
+            function onVideoLoaded() {
+                $('#screen-'+screenIndex).find('.big-image').transit({'opacity':0},500)
+            }
+
+            function onTransitionComplete() {
+                isTransitioning = false;
+                if (!isTouch) {
+                    $('#big-video-wrap').css('left',0);
+                    showVideo();
+                }
+            }
+
+            function adjustImagePositioning() {
+                $bigImage.each(function(){
+                    var $img = $(this),
+                        img = new Image();
+
+                    img.src = $img.attr('src');
+
+                    var windowWidth = $window.width(),
+                        windowHeight = $window.height(),
+                        r_w = windowHeight / windowWidth,
+                        i_w = img.width,
+                        i_h = img.height,
+                        r_i = i_h / i_w,
+                        new_w, new_h, new_left, new_top;
+
+                    if( r_w > r_i ) {
+                        new_h   = windowHeight;
+                        new_w   = windowHeight / r_i;
+                    }
+                    else {
+                        new_h   = windowWidth * r_i;
+                        new_w   = windowWidth;
+                    }
+
+                    $img.css({
+                        width   : new_w,
+                        height  : new_h,
+                        left    : ( windowWidth - new_w ) / 2,
+                        top     : ( windowHeight - new_h ) / 2
+                    })
+
+
+                });
+
+            }
+        });
+    </script>
+</body>
+</html>
